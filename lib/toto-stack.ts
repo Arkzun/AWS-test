@@ -18,7 +18,7 @@ export class TotoStack extends cdk.Stack {
         const user = new iam.User(this, 'Users', {
             password: cdk.SecretValue.unsafePlainText(config.defaultPassword),
             passwordResetRequired: true,
-            userName: 'camacle',
+            userName: 'Fish',
             groups: [iam.Group.fromGroupName(this, '123', 'ReadOnly'), iam.Group.fromGroupName(this, '456', 'mfa-group')]
         });
     }
